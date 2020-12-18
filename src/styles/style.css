@@ -13,12 +13,12 @@
 @font-face {
   font-family: 'OpenSans';
   font-weight: 400;
-  src: url ('../fonts/OpenSans-Regular.ttf');
+  src: url('../fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Neucha';
-  src: url ('../fonts/Neucha-Regular.ttf') format('truetype');
+  src: url('../fonts/Neucha-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
@@ -48,10 +48,81 @@ h3 {
 }
 
 .section {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 100px 0;
+  align-items: center; */
+  position: relative;
+  padding: 50px 0 100px 0;
   margin: 0 auto;
   max-width: 1110px;
+}
+
+header {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.header-title {
+  color: var(--main);
+}
+
+.header-title-dark {
+  color: var(--dark);
+}
+
+.header-image {
+  position: absolute;
+  height: 525px;
+  top: 55px;
+  right: -270px;
+  z-index: -10;
+}
+
+.header-article {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.padding-30 {
+  padding: 0 15px;
+}
+article {
+  width: 50%;
+}
+header::before {
+  content: '';
+  position: absolute;
+  width: 1440px;
+  height: 914px;
+  background: var(--white-translucent);
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+}
+
+.button {
+  width: 148px;
+  height: 49px;
+}
+
+.button-main {
+  background: var(--main);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+
+  margin: 12px 24px;
+}
+
+.button-main:hover {
+  background: var(--brown);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
 }
